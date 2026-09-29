@@ -1,0 +1,21 @@
+.hobbies {
+    text-align: center;
+}
+
+.hobby-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hobby-card {
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}

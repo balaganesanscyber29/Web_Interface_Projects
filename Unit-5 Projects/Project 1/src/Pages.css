@@ -1,0 +1,179 @@
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.page-panel {
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dashboard stat cards */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 900px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-card {
+  padding: 18px 20px;
+}
+
+.stat-card .stat-value {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.stat-card .stat-label {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.progress-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* Weekly page */
+.weekly-day-select {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0 12px;
+  font-size: 13px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.weekly-columns {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+}
+
+.weekly-column {
+  padding: 14px;
+  min-height: 140px;
+}
+
+.weekly-column-today {
+  border-color: var(--primary);
+}
+
+.weekly-column-header {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.weekly-column-day {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.weekly-column-today .weekly-column-day {
+  color: var(--primary);
+}
+
+.weekly-column-date {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.weekly-column .task-card {
+  padding: 8px 10px;
+}
+
+.weekly-column .task-card + .task-card {
+  margin-top: 6px;
+}
+
+@media (max-width: 1100px) {
+  .weekly-columns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .weekly-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Dashboard extras */
+.dashboard-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-progress-row .progress-track {
+  flex: 1;
+}
+
+.dashboard-progress-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  width: 40px;
+  text-align: right;
+}
+
+.dashboard-category-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 50px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.dashboard-category-name {
+  font-size: 13px;
+  text-transform: capitalize;
+  color: var(--ink);
+}
+
+.dashboard-category-count {
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+/* Important page layout */
+.important-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .important-grid {
+    grid-template-columns: 1fr;
+  }
+}
