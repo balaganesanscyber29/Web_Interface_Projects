@@ -1,17 +1,19 @@
 import './App.css'
 
 function App() {
+  const base = import.meta.env.BASE_URL
+
   const units = [
     {
       name: 'Unit 1',
       projects: [
         {
           name: 'Project 1',
-          path: '/projects/counter.html',
+          path: `${base}projects/counter.html`,
         },
         {
           name: 'Project 2',
-          path: '/projects/Student_Profile.html',
+          path: `${base}projects/Student_Profile.html`,
         },
       ],
     },
@@ -20,11 +22,11 @@ function App() {
       projects: [
         {
           name: 'Project 1',
-          path: '/projects/unit2-project1/index.html',
+          path: `${base}projects/unit2-project1/index.html`,
         },
         {
           name: 'Project 2',
-          path: '/projects/unit2-project2/index.html',
+          path: `${base}projects/unit2-project2/index.html`,
         },
       ],
     },
@@ -33,11 +35,11 @@ function App() {
       projects: [
         {
           name: 'Project 1',
-          path: '/projects/unit3-project1/index.html',
+          path: `${base}projects/unit3-project1/index.html`,
         },
         {
           name: 'Project 2',
-          path: '/projects/unit3-project2/index.html',
+          path: `${base}projects/unit3-project2/index.html`,
         },
       ],
     },
@@ -46,11 +48,11 @@ function App() {
       projects: [
         {
           name: 'Project 1',
-          path: '/projects/unit4-project1/index.html',
+          path: `${base}projects/unit4-project1/index.html`,
         },
         {
           name: 'Project 2',
-          path: '/projects/unit4-project2/index.html',
+          path: `${base}projects/unit4-project2/index.html`,
         },
       ],
     },
@@ -59,11 +61,11 @@ function App() {
       projects: [
         {
           name: 'Project 1',
-          path: '/projects/unit5-project1/index.html',
+          path: `${base}projects/unit5-project1/index.html`,
         },
         {
           name: 'Project 2',
-          path: '/projects/unit5-project2/index.html',
+          path: `${base}projects/unit5-project2/index.html`,
         },
       ],
     },
@@ -87,9 +89,7 @@ function App() {
         <div className="unit-grid">
           {units.map((unit, index) => (
             <section className="unit-card" key={unit.name}>
-              <div className="unit-number">
-                0{index + 1}
-              </div>
+              <div className="unit-number">0{index + 1}</div>
 
               <h3>{unit.name}</h3>
 
@@ -100,9 +100,7 @@ function App() {
                   <button
                     className="project-button"
                     key={project.name}
-                    onClick={() => {
-                      window.open(project.path, '_blank')
-                    }}
+                    onClick={() => window.open(project.path, '_blank')}
                   >
                     <span>{project.name}</span>
                     <span className="arrow">→</span>
