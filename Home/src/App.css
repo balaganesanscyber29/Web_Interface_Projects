@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f5f7fb;
+color: #1f2937;
+}
+
+button {
+font-family: inherit;
+}
+
+.app {
+min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+text-align: center;
+padding: 70px 20px 50px;
+background: #111827;
+color: white;
+}
+
+.tag {
+margin: 0 0 12px;
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 3px;
+color: #93c5fd;
+}
+
+.header h1 {
+margin: 0;
+font-size: 42px;
+}
+
+.subtitle {
+max-width: 600px;
+margin: 15px auto 0;
+color: #d1d5db;
+line-height: 1.6;
+}
+
+/* Main */
+
+.container {
+width: 90%;
+max-width: 1100px;
+margin: 50px auto;
+}
+
+.container h2 {
+text-align: center;
+margin-bottom: 30px;
+font-size: 28px;
+}
+
+/* Unit Cards */
+
+.unit-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.unit-card {
+position: relative;
+background: white;
+padding: 28px;
+border-radius: 16px;
+border: 1px solid #e5e7eb;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+transition: 0.25s ease;
+}
+
+.unit-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+.unit-number {
+font-size: 13px;
+font-weight: bold;
+color: #6b7280;
+margin-bottom: 18px;
+}
+
+.unit-card h3 {
+margin: 0;
+font-size: 24px;
+}
+
+.unit-card p {
+margin: 8px 0 22px;
+color: #6b7280;
+}
+
+/* Project Buttons */
+
+.project-list {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.project-button {
+width: 100%;
+border: 1px solid #e5e7eb;
+background: #f9fafb;
+padding: 13px 15px;
+border-radius: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+cursor: pointer;
+color: #1f2937;
+font-size: 15px;
+transition: 0.2s ease;
+}
+
+.project-button:hover {
+background: #111827;
+color: white;
+border-color: #111827;
+}
+
+.arrow {
+font-size: 20px;
+}
+
+/* Footer */
+
+footer {
+text-align: center;
+padding: 30px 20px;
+color: #6b7280;
+font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+.unit-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.header h1 {
+font-size: 34px;
+}
+}
+
+@media (max-width: 550px) {
+.unit-grid {
+grid-template-columns: 1fr;
+}
+
+.header {
+padding: 50px 20px 40px;
+}
+
+.header h1 {
+font-size: 30px;
+}
+}
